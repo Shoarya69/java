@@ -15,7 +15,7 @@ public class p {
     }
 }
 
-public class element{
+class element{
     public int e1;
     public int e2;
 }
