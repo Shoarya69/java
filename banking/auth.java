@@ -1,3 +1,4 @@
+package banking;
 import java.util.*;
 public class auth {
     private static Map<String,user> userdb = new HashMap<>();
