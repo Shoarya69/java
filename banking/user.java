@@ -13,9 +13,9 @@ public class user {
         this.name=n;
         this.username=ue;
         this.pass=p;
-        this.users++;
+        user.users++;
         this.ammont=a;
-        this.totalAmmount+=a;
+        user.totalAmmount+=a;
 
     }
     
@@ -32,14 +32,14 @@ public class user {
         else{
             this.ammont -= a;
             System.out.println("Succfulluy creadited Rs."+a+" ammount your total money is "+this.ammont);
-            this.totalAmmount-=a;
+            user.totalAmmount-=a;
         }
     }
     
     public void deposit(int a) {
         this.ammont+=a;
         System.out.println("Successfully added Rs."+a +"ammont your total money is "+this.ammont);
-        this.totalAmmount+=a;
+        user.totalAmmount+=a;
     }
     
     public void bankAdmin(){

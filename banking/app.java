@@ -15,7 +15,7 @@ public class app {
                
                 break;
             }
-            else if(un == "exit"){
+            else if("exit".equals(un)){
                 return;
             }
             else{
@@ -45,27 +45,28 @@ public class app {
 // =========================================================================
 // Last baar yha se choda tha
     public static void Dashboard(user i){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("1. For account checkup");
-        System.out.println("2. For withdraw");
-        System.out.println("3. For deposit");
-        System.out.println("Any other key. for Exit");
-        System.out.print("Enter your option:- ");
-        int a = sc.nextInt();
-        if( a == 1 ){
-            i.Ammount();
-        }
-        else if( a == 2 ){
-            System.out.print("How much ammount:- ");
-            int z = sc.nextInt();
-            i.withdraw(z);
-        }else if( a == 3){
-            System.out.println("how much ammount:- ");
-            int z = sc.nextInt();
-            i.deposit(z);
-        }
-        else{
-            System.out.println("Thanks for visitation");
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("1. For account checkup");
+            System.out.println("2. For withdraw");
+            System.out.println("3. For deposit");
+            System.out.println("Any other key. for Exit");
+            System.out.print("Enter your option:- ");
+            int a = sc.nextInt();
+            if( a == 1 ){
+                i.Ammount();
+            }
+            else if( a == 2 ){
+                System.out.print("How much ammount:- ");
+                int z = sc.nextInt();
+                i.withdraw(z);
+            }else if( a == 3){
+                System.out.println("how much ammount:- ");
+                int z = sc.nextInt();
+                i.deposit(z);
+            }
+            else{
+                System.out.println("Thanks for visitation");
+            }
         }
         
         
